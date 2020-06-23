@@ -1,1 +1,1 @@
-export { default as appReducer } from './appReducer';
+export { default as app } from './app';

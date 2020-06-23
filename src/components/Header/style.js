@@ -6,7 +6,7 @@ export const Container = styled.header`
   align-items: center;
   background-color: ${({ theme }) => theme.white};
   width: 100%;
-  height: 8rem;
+  min-height: 8rem;
   padding: 1.4rem 3rem;
   border-bottom: 1px solid ${({ theme }) => theme.grey200};
 `;

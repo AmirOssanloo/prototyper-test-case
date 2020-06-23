@@ -1,19 +1,20 @@
 /* Default state
 ================================== */
 const DEFAULT_STATE = {
-  title: ''
+  accounts: []
 };
 
 /* Actions
 ================================== */
-const SET_TITLE = 'app/SET_TITLE';
+const SET_ACCOUNTS = 'app/SET_ACCOUNTS';
 
 /* Reducer
 ================================== */
 const appReducer = (state = DEFAULT_STATE, action = {}) => {
   switch (action.type) {
-    case SET_TITLE:
-      return { ...state, title: action.title };
+    case SET_ACCOUNTS:
+      const { accounts } = action;
+      return { ...state, accounts };
     default:
       return state;
   }
@@ -23,6 +24,4 @@ export default appReducer;
 
 /* Action creators
 ================================== */
-export const setAppTitle = title => {
-  return { type: SET_TITLE, title };
-};
+export const setAccounts = accounts => ({ type: SET_ACCOUNTS, accounts });
