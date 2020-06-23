@@ -1,0 +1,16 @@
+{
+  "name": "prototypre-test-case",
+  "author": "Amir Ossanloo <amir@skyinthesea.com>",
+  "description": "A basic web app that follows the requirements specified bellow.",
+  "keywords": [],
+  "license": "ISC",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmirOssanloo/prototyper-test-case.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
