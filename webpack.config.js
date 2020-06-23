@@ -13,7 +13,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js)x?$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
@@ -30,7 +30,7 @@ const config = {
     })
   ],
   resolve: {
-    extensions: ['.js', 'jsx']
+    extensions: ['.js', '.jsx']
   }
 };
 

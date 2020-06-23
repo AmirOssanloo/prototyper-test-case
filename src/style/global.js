@@ -15,8 +15,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #fafafa;
-    color: #030303;
+    background-color: ${({ theme }) => theme.grey100};
+    color: ${({ theme }) => theme.grey800};
     font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;

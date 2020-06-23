@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Sidebar from '#components/Sidebar';
+import { Container } from './style';
 
 const App = () => {
   const [initialised, setInitialised] = useState(false);
@@ -6,7 +8,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setInitialised(true);
-    }, 1000);
+    }, 250);
   }, []);
 
   if (!initialised) {
@@ -14,9 +16,9 @@ const App = () => {
   }
 
   return (
-    <div>
-      <h1>Hello!</h1>
-    </div>
+    <Container>
+      <Sidebar />
+    </Container>
   );
 };
 

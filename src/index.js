@@ -4,9 +4,9 @@ import { render } from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
 import store from './store';
-import ResetCSS from './styles/reset';
-import GlobalCSS from './styles/global';
-import * as theme from './styles/theme';
+import ResetCSS from './style/reset';
+import GlobalCSS from './style/global';
+import * as theme from './style/theme';
 import App from './containers/App'
 
 const app = (
