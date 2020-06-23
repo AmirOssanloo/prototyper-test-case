@@ -1,4 +1,4 @@
-# Prototyper 
+# Prototyper Web Case
 
 A basic web app that follows the requirements specified bellow.
 
