@@ -16,10 +16,7 @@ const app = (
       <ResetCSS />
       <GlobalCSS />
       <BrowserRouter basename={'/'}>
-        <Switch>
-          <Route path="/" component={App} />
-          <Route render={() => <h1>404 Page Not Found</h1>} />
-        </Switch>
+        <App />
       </BrowserRouter>
     </ThemeProvider>
   </Provider>
