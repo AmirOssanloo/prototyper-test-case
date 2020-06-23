@@ -38,6 +38,9 @@ if (environment === 'development') {
   config.devtool = 'source-map';
   config.devServer = {
     host: 'localhost',
+    historyApiFallback: {
+      index: '/'
+    },
     port: 8080,
     hot: true,
     overlay: true

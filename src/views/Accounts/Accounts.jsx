@@ -1,14 +1,12 @@
 import React from 'react';
 import { Container } from './style';
 
-const SidebarLink = ({
-  label
-}) => {
+const Accounts = () => {
   return (
     <Container>
-      {label}
+      <h1>Accounts</h1>
     </Container>
   );
 };
 
-export default SidebarLink;
+export default Accounts;

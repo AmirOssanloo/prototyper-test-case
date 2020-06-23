@@ -1,6 +1,7 @@
 import '@babel/polyfill';
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -14,7 +15,12 @@ const app = (
     <ThemeProvider theme={theme}>
       <ResetCSS />
       <GlobalCSS />
-      <App />
+      <BrowserRouter basename={'/'}>
+        <Switch>
+          <Route path="/" component={App} />
+          <Route render={() => <h1>404 Page Not Found</h1>} />
+        </Switch>
+      </BrowserRouter>
     </ThemeProvider>
   </Provider>
 );

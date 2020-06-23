@@ -1,9 +1,14 @@
 import React from 'react';
-import { Container } from './styles';
+import HeaderLink from './HeaderLink';
+import { Container, Title } from './style';
 
 const Header = () => {
   return (
-    <Container>Hello</Container>
+    <Container>
+      <Title>Prototype Web Case</Title>
+      <HeaderLink to="/" label="Home" />
+      <HeaderLink to="/accounts" label="Accounts" />
+    </Container>
   );
 };
 

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from '#components/Sidebar';
+import { Switch, Route } from 'react-router-dom';
+import Header from '#components/Header';
+import Home from '#views/Home';
+import Accounts from '#views/Accounts';
 import { Container } from './style';
 
 const App = () => {
@@ -17,7 +20,11 @@ const App = () => {
 
   return (
     <Container>
-      <Sidebar />
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/accounts" component={Accounts} />
+      </Switch>
     </Container>
   );
 };
