@@ -27,3 +27,9 @@ should remember how the table is sorted and possibly even the table data.
 data sets on small screens.
 
 The main objective is to render a table on the page, the data should be fetched using a REST-Api call from the client.
+
+### TODO
+
+* [] Clean up app reducer
+* [] Accounts table responsive
+* [] DRY AccountsTable
