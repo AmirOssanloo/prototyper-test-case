@@ -13,10 +13,15 @@ export const Grid = styled(MuiGrid)`
   }
 `;
 
-export const Paper = styled.div`
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: ${({ theme, branded }) => branded ? theme.primary : theme.grey300};
   width: 100%;
   height: 100%;
   min-height: 24rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  padding: 3rem 2rem;
+  color: ${({ theme, branded }) => branded ? theme.white : theme.grey800};
 `;

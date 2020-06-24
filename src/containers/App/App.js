@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Header from '#components/Header';
-import Home from '#views/Home';
-import Accounts from '#views/Accounts';
+import HomeView from '#views/Home';
+import AccountsView from '#views/Accounts';
 import { Container, Main } from './style';
 
 const App = () => {
@@ -23,8 +23,8 @@ const App = () => {
       <Header />
       <Main>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/accounts" component={Accounts} />
+          <Route exact path="/" component={HomeView} />
+          <Route exact path="/accounts" component={AccountsView} />
           <Route render={() => <h1>404 Page Not Found</h1>} />
         </Switch>
       </Main>

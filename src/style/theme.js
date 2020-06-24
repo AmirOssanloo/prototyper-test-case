@@ -8,7 +8,7 @@ export const text = '#333333';
 export const link = '#007ac7';
 
 export const white = '#ffffff';
-export const black = '#ffffff';
+export const black = '#000000';
 
 export const grey100 = '#f8f8f8';
 export const grey200 = '#e9e9e9';

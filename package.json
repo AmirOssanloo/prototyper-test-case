@@ -1,5 +1,5 @@
 {
-  "name": "prototypre-test-case",
+  "name": "prototyper-test-case",
   "author": "Amir Ossanloo <amir@skyinthesea.com>",
   "description": "A basic web app that follows the requirements specified bellow.",
   "keywords": [],
@@ -31,7 +31,6 @@
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "axios": "^0.19.2",
-    "got": "^11.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",

@@ -1,40 +1,55 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useState } from 'react';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux'
+import Button from '#components/UI/Button';
+import Loader from '#components/UI/Loader';
 import { setAccounts } from '#store/ducks/app';
+import AccountsTable from './AccountsTable';
+import AccountsRow from './AccountsTable/AccountsRow';
 import { Container } from './style';
 
 const Accounts = () => {
+  const [fetching, setFetching] = useState(false);
   const dispatch = useDispatch();
   const accounts = useSelector(({ app }) => app.accounts);
 
-  useEffect(() => {
-    const fetchAccounts = async () => {
-      const response = await axios.get('https://private-9b37c2-wlb.apiary-mock.com/accounts?ccy=SEK');
+  const fetchAccounts = async (e) => {
+    setFetching(true);
+    const response = await axios.get('https://private-9b37c2-wlb.apiary-mock.com/accounts?ccy=SEK');
 
-      if (response.status === 200) {
-        const { data: accounts } = response;
+    if (response.status === 200) {
+      const { data: accounts } = response;
+
+      // Mock delay
+      setTimeout(() => {
         dispatch(setAccounts(accounts));
-      }
-    };
-
-    if (!accounts.length) {
-      fetchAccounts();
+        setFetching(false);
+      }, 500);
     }
-  }, []);
+  };
 
-  if (!accounts.length) {
-    return (<h1>WOOOOOOOOOOAH</h1>);
-  }
+  const renderInstructions = () => (
+    <React.Fragment>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed nisl blandit, rutrum nisi eu, condimentum eros. Phasellus porttitor leo vitae risus feugiat, sed luctus turpis sollicitudin.</p>
+      <Button onClick={fetchAccounts}>
+        Fetch Accounts
+      </Button>
+      {fetching && <Loader />}
+    </React.Fragment>
+  );
+
+  const renderAccounts = () => (
+    <AccountsTable>
+      {accounts.map(account => {
+        return <AccountsRow key={`AccountRow-${account.id}`} account={account} />
+      })}
+    </AccountsTable>
+  );
 
   return (
     <Container>
       <h1>Accounts</h1>
-      {accounts.map(account => (
-        <div key={`${account.id}-${account.accountId}`}>
-          <span>{account.id}</span>
-        </div>
-      ))}
+      {!accounts.length ? renderInstructions() : renderAccounts()}
     </Container>
   );
 };

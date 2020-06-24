@@ -9,6 +9,6 @@ export const Container = styled.div`
   }
 
   &:not(:last-child) {
-    margin-right: 4.5rem;
+    margin-right: 3rem;
   }
 `;

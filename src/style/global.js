@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -18,9 +17,28 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.grey100};
     color: ${({ theme }) => theme.grey800};
     font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     font-weight: 300;
     line-height: 1.4;
+  }
+
+  h1 {
+    margin-bottom: 2.6rem;
+    padding-bottom: 0.6rem;
+    font-size: 3.2rem;
+    font-weight: 400;
+    border-bottom: 1px solid ${({ theme }) => theme.grey300};
+  }
+
+  h2 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
   }
 `;
 
